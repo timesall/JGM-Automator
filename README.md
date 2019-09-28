@@ -6,7 +6,10 @@
 
 ```bash
 # 安装依赖
-python -m pip install uiautomator2 opencv
+python -m pip install uiautomator2 opencv-python
+
+#adb安装
+# 去官网安装,然后将安装目录添加到系统环境变量Path中
 
 # adb 连接
 # 使用 MuMu 模拟器，确保屏幕大小为 1920（长） * 1080（宽）
@@ -16,6 +19,8 @@ adb connect 127.0.0.1:7555
 adb devices
 
 # 在已完成 adb 连接后，在手机安装 ATX 应用
+pip install --pre uiautomator2
+pip install pillow
 python -m uiautomator2 init
 
 # 打开 ATX ，点击“启动 UIAutomator”选项，确保 UIAutomator 是运行的。
